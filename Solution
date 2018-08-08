@@ -1,0 +1,84 @@
+// *** New topic the myForEach() ***
+
+function myforEach(array, func){
+    for(var i = 0; i < array.length; i += 1){
+        func(array[i])
+    }
+} // enter
+undefined
+var list = [1,2,3,4] // enter
+undefined
+myforEach(list, function(num){
+    console.log(num)
+})//enter
+1
+2
+3
+4
+undefined
+
+// *** myForEach() *** extra example
+
+function myForEach(arr, door){
+    //loop through array
+    for(var i = 0; i < arr.length; i++){
+        //call door for each item in array
+        door();
+    }
+}//enter
+undefined
+var items = ["pen","pencil","book"];//enter
+undefined
+myForEach(items,alert)//after enter the page alerts tree times without any syntax
+undefined
+
+//in this example the page alerts tree times with infos
+
+function myForEach(arr, door){
+    //loop through array
+    for(var i = 0; i < arr.length; i++){
+        //call door for each item in array
+        door(arr[i]);
+    }
+}//enter
+undefined
+myForEach(items ,alert)//enter
+undefined
+
+// another option to show dates on console
+myForEach(items, function(door){
+    console.log(door);
+});//enter
+pen
+pencil
+book
+undefined
+
+
+//another eample for this lesson
+
+Array.prototype.myForeach = function(door){
+    for(var i = 0; i <this.length; i++){
+        door(this[i]);
+    }
+}//enter
+ƒ (door){
+    for(var i = 0; i <this.length; i++){
+        door(this[i]);
+    }
+}
+var neighbors = ["Masha","Sasha","Nyusha"];//enter
+undefined
+neighbors.myForeach(alert)//enter
+undefined
+neighbors.myForeach(function(name){
+    console.log("I love " + name);
+})//enter
+I love Masha
+I love Sasha
+I love Nyusha
+undefined
+
+
+
+
